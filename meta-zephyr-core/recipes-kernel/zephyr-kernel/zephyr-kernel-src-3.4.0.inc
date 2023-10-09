@@ -2,7 +2,7 @@
 
 SRCREV_FORMAT = "default"
 
-SRCREV_default = "356c8cbe63ae01b3ab438382639d25bb418a0213"
+SRCREV_default = "f477baacc60aa8d6f0eff4039124b577db4a5114"
 SRCREV_bsim = "908ffde6298a937c6549dbfa843a62caab26bfc5"
 SRCREV_babblesim_base = "02838ca04c4562e68dc876196828d8121679e537"
 SRCREV_babblesim_ext_2G4_libPhyComv1 = "9018113a362fa6c9e8f4b9cab9e5a8f12cc46b94"
@@ -70,7 +70,7 @@ SRCREV_zcbor = "67fd8bb88d3136738661fa8bb5f9989103f4599e"
 SRCREV_zscilib = "34c3432e81085bb717e4871d21ca419ae0058ec5"
 SRCREV_thrift = "10023645a0e6cb7ce23fcd7fd3dbac9f18df6234"
 
-SRC_URI_ZEPHYR ?= "git://github.com/zephyrproject-rtos/zephyr.git;protocol=https"
+SRC_URI_ZEPHYR ?= "git://github.com/jeppenodgaard/zephyr.git;protocol=https"
 SRC_URI_ZEPHYR_BSIM ?= "git://github.com/zephyrproject-rtos/babblesim-manifest;protocol=https"
 SRC_URI_ZEPHYR_BABBLESIM_BASE ?= "git://github.com/BabbleSim/base.git;protocol=https"
 SRC_URI_ZEPHYR_BABBLESIM_EXT_2G4_LIBPHYCOMV1 ?= "git://github.com/BabbleSim/ext_2G4_libPhyComv1.git;protocol=https"
@@ -143,7 +143,7 @@ SRC_URI_PATCHES ?= "\
 "
 
 SRC_URI = "\
-    ${SRC_URI_ZEPHYR};branch=${ZEPHYR_BRANCH};name=default;destsuffix=git/zephyr \
+    ${SRC_URI_ZEPHYR};nobranch=1;name=default;destsuffix=git/zephyr \
     ${SRC_URI_ZEPHYR_BSIM};name=bsim;nobranch=1;destsuffix=git/tools/bsim \
     ${SRC_URI_ZEPHYR_BABBLESIM_BASE};name=babblesim_base;nobranch=1;destsuffix=git/tools/bsim/components \
     ${SRC_URI_ZEPHYR_BABBLESIM_EXT_2G4_LIBPHYCOMV1};name=babblesim_ext_2G4_libPhyComv1;nobranch=1;destsuffix=git/tools/bsim/components/ext_2G4_libPhyComv1 \
